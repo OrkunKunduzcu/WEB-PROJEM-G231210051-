@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>İlgi Alanım: Coğrafya - Orkun Kunduzcu</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        body.ilgi-alanlarim-body {
+            background-color: #f8f9fa;
+            color: #212529;
+        }
+
+        .hero-geography-theme {
+            background: url('images/doga_ve_harita_arkaplan.jpg') no-repeat center center;
+            background-size: cover;
+            padding: 80px 0;
+            color: white;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+        }
+        .hero-geography-theme h1 {
+            font-size: 2.8rem;
+            font-weight: bold;
+        }
+
+        .main-content-container {
+            background-color: #ffffff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 0 15px rgba(0,0,0,0.1);
+            margin-top: -50px;
+            position: relative;
+            z-index: 10;
+        }
+        .main-content-container h1, 
+        .main-content-container .lead {
+            color: #343a40;
+            text-shadow: none;
+        }
+
+        .content-card-geo {
+            background-color: #f8f9fa;
+            border: 1px solid #dee2e6;
+            padding: 25px;
+            margin-bottom: 25px;
+            border-radius: 8px;
+            color: #212529;
+            display: flex; 
+            flex-direction: column; 
+            justify-content: space-between; 
+        }
+        .content-card-geo h3 {
+            color: #0056b3;
+            border-bottom: 2px solid #0056b3;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+            font-weight: bold;
+        }
+        .content-card-geo img {
+            max-width: 100%;
+            height: auto;
+            max-height: 250px; 
+            object-fit: cover; 
+            border-radius: 8px;
+            margin-top: 15px; 
+            border: 1px solid #ced4da;
+        }
+        .content-card-geo p {
+            line-height: 1.7;
+            color: #495057;
+            flex-grow: 1;
+        }
+        .content-card-geo .img-link-wrapper { 
+            display: block; 
+            margin-top: auto; 
+        }
+
+        .api-section-geo {
+            background-color: #e9ecef;
+            padding: 25px;
+            margin-top: 40px;
+            border-radius: 10px;
+            color: #343a40;
+            box-shadow: inset 0 0 10px rgba(0,0,0,0.1);
+        }
+        .api-section-geo h4 {
+            color: #198754;
+            font-weight: bold;
+        }
+        #api-data-placeholder-geo {
+            font-style: italic;
+            font-size: 1.1rem;
+            padding: 15px;
+            background-color: #f8f9fa;
+            border-radius: 5px;
+            min-height: 80px;
+            color: #212529;
+            border: 1px solid #dee2e6;
+        }
+        #api-data-placeholder-geo .blockquote-footer a {
+            color: #007bff;
+        }
+    </style>
+</head>
+<body class="ilgi-alanlarim-body">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="Hakkimda.HTML">Hakkımda</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Oz-Gecmis.HTML">Özgeçmiş</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Memleketim.HTML">Memleketim</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="ilgi-alanlarim.HTML">İlgi Alanlarım</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Mirasimiz.HTML">Mirasımız</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="İletisim-Sayfasi.HTML">İletişim</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <header class="hero-geography-theme text-center">
+        <div class="container">
+            <h1>İlgi Alanım: Coğrafya</h1>
+            <p class="lead">Dünyanın Dinamikleri: Akarsular ve Volkanlar!</p>
+        </div>
+    </header>
+
+    <div class="container my-5 main-content-container">
+        <div class="text-center mb-5">
+            <h1>Coğrafi Keşiflerim</h1>
+            <p class="lead">Yeryüzünü şekillendiren ve hayranlık uyandıran doğal güçler.</p>
+        </div>
+        <div class="row">
+            <div class="col-md-6 d-flex">
+                <div class="content-card-geo">
+                    <h3> Akarsular: Yaşamın Damarları</h3>
+                    <p>Akarsular, yeryüzünün şekillenmesinde en önemli dış etkenlerden biridir. Taşıdıkları su miktarı, akış hızları ve yatak eğimleri ile aşındırma, taşıma ve biriktirme faaliyetleri yaparlar. Vadiler, deltalar, menderesler gibi birçok yeryüzü şeklinin oluşumunda doğrudan rol oynarlar. Aynı zamanda tatlı su kaynağı olarak medeniyetlerin kurulup gelişmesinde hayati bir öneme sahip olmuşlardır. Akarsu ekosistemleri de zengin bir biyoçeşitliliğe ev sahipliği yapar.</p>
+                    <div class="text-center img-link-wrapper">
+                        <a href="https://tr.wikipedia.org/wiki/Akarsu" target="_blank">
+                            <img src="images/akarsu.jpeg" alt="Bir Akarsu Manzarası">
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6 d-flex">
+                <div class="content-card-geo">
+                    <h3><i class="fas fa-volcano"></i> Volkanlar: Dünyanın Ateşli Nefesi</h3>
+                    <p>Volkanlar, yerkabuğunun derinliklerinden gelen magma, kül ve gazların yeryüzüne püskürdüğü dağlardır. Oluşumları tektonik plaka hareketleriyle yakından ilişkilidir. Volkanik patlamalar yıkıcı olabilse de, aynı zamanda verimli toprakların oluşumuna, jeotermal enerji kaynaklarına ve çeşitli maden yataklarının ortaya çıkmasına neden olurlar. Volkanik dağlar ve krater gölleri gibi eşsiz manzaralar da turistik açıdan ilgi çekicidir. Volkanoloji bilimi, bu doğa olaylarını inceleyerek riskleri azaltmayı ve faydalarını anlamayı hedefler.</p>
+                    <div class="text-center img-link-wrapper">
+                         <a href="https://tr.wikipedia.org/wiki/Volkan" target="_blank">
+                            <img src="images/volkan.jpeg" alt="Etkileyici bir Volkan Patlaması">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row mt-4">
+            <div class="col-12">
+                <div class="api-section-geo">
+                    <h4 class="text-center mb-3"> Günün Rastgele Bilgisi (API'den)</h4>
+                    <div id="api-data-placeholder-geo" class="text-center">
+                        <p>Yükleniyor...</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="text-center bg-dark text-white p-3 mt-5">
+        <p class="mb-0">&copy; 2025 Orkun Kunduzcu. Tüm Hakları Saklıdır.</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/geography_api_caller.js"></script>
+</body>
+</html>
