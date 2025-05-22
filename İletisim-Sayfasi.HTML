@@ -10,9 +10,6 @@
 <body>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container-fluid">
-            <a class="navbar-brand" href="https://www.sakarya.edu.tr" target="_blank">
-                <img src="css/logo-sakarya-universitesi.png" alt="LOGO" title="Sakarya Üniversitesi Logosudur" style="height: 40px;">
-            </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -128,11 +125,10 @@
     </div>
 
     <script>
-        // Vue.js Uygulaması
         const contactApp = new Vue({
             el: '#contactApp',
             data: {
-                formVeri: { // Form verilerini tutacak nesne
+                formVeri: {
                     adSoyad: '',
                     email: '',
                     telefon: '',
@@ -144,7 +140,7 @@
                     dogumTarihi: '',
                     sartlarKabul: false
                 },
-                hatalar: [] // Doğrulama hatalarını tutacak dizi
+                hatalar: []
             },
             methods: {
                 formuTemizle() {
@@ -161,46 +157,39 @@
                         sartlarKabul: false
                     };
                     this.hatalar = [];
-                    document.getElementById('iletisimFormu').reset(); // Dosya inputunu da temizler
+                    document.getElementById('iletisimFormu').reset();
                 },
                 formuDogrulaVueVeGonder() {
-                    this.hatalar = []; // Önceki hataları temizle
+                    this.hatalar = [];
 
-                    // Ad Soyad Kontrolü
                     if (!this.formVeri.adSoyad) {
                         this.hatalar.push('Ad Soyad alanı boş bırakılamaz.');
                     }
 
-                    // E-posta Kontrolü
                     if (!this.formVeri.email) {
                         this.hatalar.push('E-posta alanı boş bırakılamaz.');
                     } else if (!this.gecerliEmail(this.formVeri.email)) {
                         this.hatalar.push('Geçerli bir e-posta adresi giriniz.');
                     }
 
-                    // Telefon Kontrolü (Sadece rakam)
                     if (this.formVeri.telefon && !/^\d+$/.test(this.formVeri.telefon)) {
                         this.hatalar.push('Telefon numarası sadece rakamlardan oluşmalıdır.');
                     }
                     
-                    // Konu Kontrolü
                     if (!this.formVeri.konu) {
                         this.hatalar.push('Lütfen bir konu seçiniz.');
                     }
 
-                    // Mesaj Kontrolü
                     if (!this.formVeri.mesaj) {
                         this.hatalar.push('Mesaj alanı boş bırakılamaz.');
                     } else if (this.formVeri.mesaj.length < 10) {
                         this.hatalar.push('Mesajınız en az 10 karakter olmalıdır.');
                     }
                     
-                    // Şartlar Kabul Kontrolü
                     if (!this.formVeri.sartlarKabul) {
                         this.hatalar.push('Kullanım şartlarını kabul etmelisiniz.');
                     }
 
-                    // Hata yoksa formu gönder
                     if (this.hatalar.length === 0) {
                         alert('Vue.js ile doğrulama başarılı! Form gönderiliyor...');
                         document.getElementById('iletisimFormu').submit();
@@ -213,7 +202,6 @@
             }
         });
 
-        // Saf JavaScript ile Doğrulama Fonksiyonu
         function formuDogrulaJSVeGonder() {
             const hatalarJS = [];
             const form = document.getElementById('iletisimFormu');
@@ -224,12 +212,10 @@
             const mesaj = form.elements['mesaj'].value;
             const sartlarKabul = form.elements['sartlarKabul'].checked;
 
-            // Ad Soyad Kontrolü
             if (!adSoyad) {
                 hatalarJS.push('Ad Soyad alanı boş bırakılamaz.');
             }
 
-            // E-posta Kontrolü
             if (!email) {
                 hatalarJS.push('E-posta alanı boş bırakılamaz.');
             } else {
@@ -239,31 +225,26 @@
                 }
             }
             
-            // Telefon Kontrolü (Sadece rakam)
             if (telefon && !/^\d+$/.test(telefon)) {
                 hatalarJS.push('Telefon numarası sadece rakamlardan oluşmalıdır.');
             }
 
-            // Konu Kontrolü
             if (!konu) {
                 hatalarJS.push('Lütfen bir konu seçiniz.');
             }
 
-            // Mesaj Kontrolü
             if (!mesaj) {
                 hatalarJS.push('Mesaj alanı boş bırakılamaz.');
             } else if (mesaj.length < 10) {
                 hatalarJS.push('Mesajınız en az 10 karakter olmalıdır.');
             }
 
-            // Şartlar Kabul Kontrolü
             if (!sartlarKabul) {
                 hatalarJS.push('Kullanım şartlarını kabul etmelisiniz.');
             }
 
-            // Hata varsa göster
-            const hataMesajAlani = contactApp.hatalar; // Vue'nun hata dizisini kullanalım veya ayrı bir JS hata alanı oluşturabiliriz.
-            contactApp.hatalar = hatalarJS; // Vue'daki hatalar dizisini güncelleyelim ki ekranda görünsün.
+            const hataMesajAlani = contactApp.hatalar;
+            contactApp.hatalar = hatalarJS;
 
             if (hatalarJS.length === 0) {
                 alert('JavaScript ile doğrulama başarılı! Form gönderiliyor...');
