@@ -7,9 +7,8 @@
     <title>Hoş Geldiniz - Orkun Kunduzcu</title>
     <script>
         setTimeout(function() {
-            // Başarılı giriş sonrası yönlendirilecek sayfa
             window.location.href = "Hakkimda.HTML";
-        }, 3000); // 3 saniye sonra otomatik yönlendirme
+        }, 3000);
     </script>
 </head>
 <body>
