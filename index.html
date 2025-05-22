@@ -9,36 +9,25 @@
         function validateForm() {
             var email = document.getElementById("email").value;
             var password = document.getElementById("password").value;
-            var emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/; // Daha genel bir e-posta formatı
-            // Veya Sakarya Üniversitesi e-posta formatı için:
-            // var emailPattern = /^[a-zA-Z0-9._-]+@sakarya\.edu\.tr$/i;
-
+            var emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
 
             if (!email || !password) {
                 alert("E-posta ve şifre alanları doldurulmalıdır.");
-                return false; // Form gönderimini engelle
+                return false;
             }
 
-            // E-posta format kontrolü (Proje isterlerine göre)
             if (!emailPattern.test(email)) {
                 alert("Geçerli bir e-posta adresi giriniz. Örneğin: G231210051@sakarya.edu.tr");
-                return false; // Form gönderimini engelle
+                return false;
             }
 
-            // İsterlerde öğrenci numarasının email formatında olması gerektiği belirtiliyor,
-            // bu kontrol yukarıdaki emailPattern ile sağlanmış oluyor.
-            // Ayrıca şifrenin boş olmaması da kontrol ediliyor.
-
-            return true; // Form geçerli, gönderilebilir
+            return true;
         }
     </script>
 </head>
 <body>
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <div class="container-fluid">
-        <a class="navbar-brand" href="https://www.sakarya.edu.tr" target="_blank">
-            <img src="css/logo-sakarya-universitesi.png" alt="LOGO" title="Sakarya Üniversitesi Logosudur" style="height: 40px;">
-        </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
