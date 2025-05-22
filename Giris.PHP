@@ -115,21 +115,17 @@
         $email = isset($_POST['email']) ? trim($_POST['email']) : '';
         $password = isset($_POST['password']) ? trim($_POST['password']) : '';
 
-        // Kendi öğrenci numaran ve şifren
         $correct_email = "G231210051@sakarya.edu.tr";
         $correct_password = "G231210051";
 
         if (!empty($email) && !empty($password)) {
             if ($email === $correct_email && $password === $correct_password) {
-                // Giriş başarılı, Gecis.PHP'ye yönlendir
                 header("Location: Gecis.PHP");
                 exit();
             } else {
-                // Giriş başarısız, JavaScript ile modalı göster
                 echo "<script>showErrorModal();</script>";
             }
         } else {
-            // Alanlar boşsa JavaScript ile uyarı ver (validateGirisForm zaten yapıyor ama ek kontrol)
              echo "<script>alert('E-posta ve şifre alanları doldurulmalıdır.');</script>";
         }
     }
