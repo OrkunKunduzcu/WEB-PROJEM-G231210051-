@@ -9,9 +9,6 @@
 <body>
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <div class="container-fluid">
-        <a class="navbar-brand" href="https://www.sakarya.edu.tr" target="_blank">
-            <img src="css/logo-sakarya-universitesi.png" alt="LOGO" title="Sakarya Üniversitesi Logosudur" style="height: 40px;">
-        </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -46,53 +43,33 @@
                 <div class="card-header">Giriş Durumu</div>
                 <div class="card-body">
                     <?php
-                    // session_start(); // Eğer oturum yönetimi kullanacaksanız bu satırı aktif edin.
-                                    // Proje isterlerinde session'dan bahsedilmiyor, bu yüzden şimdilik kapalı olabilir.
 
                     if ($_SERVER["REQUEST_METHOD"] == "POST") {
                         $email = isset($_POST['email']) ? trim($_POST['email']) : '';
                         $password = isset($_POST['password']) ? trim($_POST['password']) : '';
 
-                        // ----- SENİN GİRİŞ BİLGİLERİN -----
-                        $correct_email = "G231210051@sakarya.edu.tr"; // E-posta formatında öğrenci numaran
-                        $correct_password = "G231210051";          // Sadece öğrenci numaran
-                        // ------------------------------------
+                        $correct_email = "G231210051@sakarya.edu.tr";
+                        $correct_password = "G231210051";
 
-                        // Boş alan kontrolü (PHP tarafında da yapmak iyi bir pratiktir)
                         if (empty($email) || empty($password)) {
                             echo '<p class="alert alert-warning">E-posta ve şifre alanları boş bırakılamaz.</p>';
                             echo '<p><a href="index.html" class="btn btn-primary">Giriş Sayfasına Dön</a></p>';
                         }
-                        // E-posta format kontrolü (PHP tarafında da yapılabilir)
-                        // Proje isterlerinde bu kontrolün JavaScript ile yapılması isteniyor login sayfasında.
-                        // O yüzden burada çok detaylı bir regex'e gerek yok, temel bir filter_var yeterli olabilir veya JS'e güvenilebilir.
-                        /*
                         else if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
                             echo '<p class="alert alert-warning">Geçersiz e-posta formatı.</p>';
                             echo '<p><a href="index.html" class="btn btn-primary">Giriş Sayfasına Dön</a></p>';
                         }
                         */
                         else if ($email === $correct_email && $password === $correct_password) {
-                            // Başarılı giriş durumunda Gecis.PHP'ye yönlendir.
-                            // Eğer session kullanacaksanız, burada session değişkenlerini ayarlayabilirsiniz.
-                            // $_SESSION['user_email'] = $email;
-                            // $_SESSION['loggedin'] = true;
                             header("Location: Gecis.PHP");
-                            exit; // Yönlendirmeden sonra kodun devam etmemesi için exit() önemlidir.
+                            exit;
                         } else {
-                            // Başarısız giriş
                             echo '<p class="alert alert-danger">E-posta veya şifre yanlış. Lütfen tekrar deneyin.</p>';
                             echo '<p><a href="index.html" class="btn btn-primary">Giriş Sayfasına Dön</a></p>';
-                            // Otomatik yönlendirme için JavaScript (isteğe bağlı)
-                            // echo '<script>setTimeout(function(){ window.location.href = "index.html"; }, 3000);</script>';
                         }
                     } else {
-                        // POST metodu ile gelinmediyse (yani doğrudan login.php'ye erişilmeye çalışıldıysa)
-                        // ana giriş sayfasına yönlendir.
                         echo '<p class="alert alert-info">Lütfen giriş formunu kullanınız.</p>';
                         echo '<p><a href="index.html" class="btn btn-secondary">Giriş Sayfasına Git</a></p>';
-                        // header("Location: index.html");
-                        // exit;
                     }
                     ?>
                 </div>
