@@ -6,16 +6,12 @@
     <title>İletişim Sayfası Sonucu</title>
     <link rel="stylesheet" href="css/style.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
-       <!-- Google Fonts linki -->
     <link href="https://fonts.googleapis.com/css2?family=Jersey+25&display=swap" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
 </head>
 <body>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <div class="container-fluid"> <!-- Üst tarafta bulunan konteynır kısmını tasarladım ve uyguladım ve responsive bir yapıda yaptım.-->
-            <a class="navbar-brand" href="https://www.sakarya.edu.tr" target="_blank">
-                <img src="css/logo-sakarya-universitesi.png" alt="LOGO" title="Sakarya Üniversitesi Logosudur" style="height: 40px;">
-            </a>
+        <div class="container-fluid">
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -63,7 +59,7 @@
         </div>
     </div>
 
-    <script>// Javascript ile gönderilen dosyaları kaydetmenin yapıldığı kısım.
+    <script>
         new Vue({
             el: '#resultApp',
             data: {
