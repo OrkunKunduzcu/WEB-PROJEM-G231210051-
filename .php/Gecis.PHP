@@ -3,8 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/style.css"> <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
-    <title>Hoş Geldiniz - Orkun Kunduzcu</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <title>Hoş Geldiniz</title>
     <script>
         setTimeout(function() {
             window.location.href = "Hakkimda.HTML";
@@ -20,30 +21,46 @@
             <div class="collapse navbar-collapse" id="navbarNavDropdown">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item">
-                        <a class="nav-link" href="Hakkimda.HTML">Hakkımda</a>
+                        <a class="nav-link" href="#">Hakkımda</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="Oz-Gecmis.HTML">Özgeçmiş</a>
+                        <a class="nav-link" href="#">Özgeçmiş</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="Memleketim.HTML">Memleketim</a>
+                        <a class="nav-link" href="#">Memleketim</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="ilgi-alanlarim.HTML">İlgi Alanlarım</a>
+                        <a class="nav-link" href="#">İlgi Alanlarim</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="Mirasimiz.HTML">Mirasımız</a>
+                        <a class="nav-link" href="#">Mirasımız</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="İletisim-Sayfasi.HTML">İletişim</a>
+                        <a class="nav-link" href="#">İletişim</a>
                     </li>
                 </ul>
             </div>
         </div>
     </nav>
-    <div class="container text-center mt-5">
-        <h2>Hoş Geldiniz G231210051!</h2> <p>Ana sayfaya otomatik olarak yönlendiriliyorsunuz...</p>
+    <div class="container">
+    Hoş Geldiniz G231210051, Otomatik olarak yönlendiriliyorsunuz.
     </div>
+    <?php
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $email = isset($_POST['email']) ? trim($_POST['email']) : '';
+    $password = isset($_POST['password']) ? trim($_POST['password']) : '';
+
+    $correct_email = "g231210051@sakarya.edu.tr";
+    $correct_password = "g231210051";
+
+    if ($email === $correct_email && $password === $correct_password) {
+        header("Location: Hakkimda.HTML");
+        exit;
+    } else {
+        echo "<script>alert('Girdiğiniz bilgiler yanlış. Lütfen tekrar deneyin.'); window.location.href='giris.html';</script>";
+    }
+}
+?>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
