@@ -15,22 +15,22 @@
             <div class="collapse navbar-collapse" id="navbarNavDropdown">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item">
-                        <a class="nav-link" href="Hakkimda.HTML">Hakkımda</a>
+                        <a class="nav-link" href="Hakkimda.html">Hakkımda</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="Oz-Gecmis.HTML">Özgeçmiş</a>
+                        <a class="nav-link" href="Oz-Gecmis.html">Özgeçmiş</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="Memleketim.HTML">Memleketim</a>
+                        <a class="nav-link" href="Memleketim.html">Memleketim</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="ilgi-alanlarim.HTML">İlgi Alanlarım</a>
+                        <a class="nav-link" href="ilgi-alanlarim.html">İlgi Alanlarım</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="Mirasimiz.HTML">Mirasımız</a>
+                        <a class="nav-link" href="Mirasimiz.html">Mirasımız</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="İletisim-Sayfasi.HTML">İletişim</a> </li>
+                        <a class="nav-link" href="İletisim-Sayfasi.html">İletişim</a> </li>
                 </ul>
             </div>
         </div>
@@ -98,8 +98,7 @@
                 echo "<li class='list-group-item'><strong>Doğum Tarihi:</strong> Belirtilmedi (Opsiyonel)</li>";
             }
 
-            // Şartlar Kabul
-            if (isset($_POST['sartlarKabul']) && $_POST['sartlarKabul'] == 'on') { // Checkbox 'on' değeriyle gelir
+            if (isset($_POST['sartlarKabul']) && $_POST['sartlarKabul'] == 'on') {
                 echo "<li class='list-group-item'><strong>Kullanım Şartları:</strong> Kabul Edildi</li>";
             } else {
                 echo "<li class='list-group-item'><strong>Kullanım Şartları:</strong> Kabul Edilmedi</li>";
@@ -118,11 +117,11 @@
             echo "</ul>";
         } else {
             echo "<div class='alert alert-warning'>Bu sayfaya doğrudan erişim desteklenmemektedir. Lütfen iletişim formunu kullanınız.</div>";
-            echo "<p><a href='İletisim-Sayfasi.HTML' class='btn btn-primary'>İletişim Formuna Geri Dön</a></p>";
+            echo "<p><a href='İletisim-Sayfasi.html' class='btn btn-primary'>İletişim Formuna Geri Dön</a></p>";
         }
         ?>
         <div class="mt-4">
-            <a href="İletisim-Sayfasi.HTML" class="btn btn-secondary">&laquo; İletişim Formuna Geri Dön</a>
+            <a href="İletisim-Sayfasi.html" class="btn btn-secondary">&laquo; İletişim Formuna Geri Dön</a>
         </div>
     </div>
 
