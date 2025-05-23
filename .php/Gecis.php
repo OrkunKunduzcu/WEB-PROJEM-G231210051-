@@ -8,7 +8,7 @@
     <title>Hoş Geldiniz</title>
     <script>
         setTimeout(function() {
-            window.location.href = "Hakkimda.HTML";
+            window.location.href = "Hakkimda.html";
         }, 3000);
     </script>
 </head>
@@ -50,11 +50,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $email = isset($_POST['email']) ? trim($_POST['email']) : '';
     $password = isset($_POST['password']) ? trim($_POST['password']) : '';
 
-    $correct_email = "g231210051@sakarya.edu.tr";
-    $correct_password = "g231210051";
+    $correct_email = "G231210051@sakarya.edu.tr";
+    $correct_password = "G231210051";
 
     if ($email === $correct_email && $password === $correct_password) {
-        header("Location: Hakkimda.HTML");
+        header("Location: Hakkimda.html");
         exit;
     } else {
         echo "<script>alert('Girdiğiniz bilgiler yanlış. Lütfen tekrar deneyin.'); window.location.href='giris.html';</script>";
