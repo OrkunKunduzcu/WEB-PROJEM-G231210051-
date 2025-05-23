@@ -1,0 +1,352 @@
+@import url('https://fonts.googleapis.com/css2?family=Jersey+25&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+body {
+    font-family: 'Poppins', 'Arial', sans-serif;
+    background-image: url('../images/Arkaplan.jpeg');
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow-x: hidden;
+}
+
+.navbar-dark .navbar-nav .nav-link {
+    color: white;
+    font-size: 1rem;
+    transition: background-color 0.3s;
+    padding: 0.5rem 1rem;
+}
+
+.navbar-dark .navbar-nav .nav-link:hover,
+.navbar-dark .navbar-nav .nav-link.active {
+    background: rgb(46, 77, 136);
+    border-radius: 5px;
+}
+
+.navbar-brand {
+    font-family: 'Jersey 25', cursive;
+    font-size: 1.8rem;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Jersey 25', 'Poppins', sans-serif;
+}
+
+footer.bg-dark {
+    padding: 1.5rem 0;
+    margin-top: auto;
+}
+
+body.login-page-body {
+    background-image: url('../images/Arkaplan.jpeg');
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+.login-page-body .navbar {
+    flex-shrink: 0;
+}
+.login-page-body .container.login-container {
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.login-page-body .card {
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.25);
+    max-width: 450px;
+    width: 100%;
+}
+.login-page-body .card-header {
+    font-size: 1.75rem;
+    font-weight: 700;
+    background-color: rgba(0, 86, 179, 0.15);
+    border-bottom: 1px solid rgba(0,0,0,0.1);
+    color: #0056b3;
+}
+.login-page-body .form-label {
+    font-weight: 500;
+    color: #333;
+}
+
+body.sayfa-hakkimda,
+body.sayfa-ozgecmis,
+body.sayfa-memleketim,
+body.sayfa-mirasimiz,
+body.sayfa-ilgi-alanlarim,
+body.sayfa-iletisim,
+body.sayfa-iletisim-cikti {
+    background-color: #f4f7f6;
+    color: #333333;
+}
+
+.sayfa-hakkimda .content-section .text {
+    padding: 20px 25px;
+    background-color: rgba(0, 0, 0, 0.65);
+    color:white;
+    font-family: 'Poppins', sans-serif;
+    border-radius: 8px;
+    margin-bottom: 25px;
+    line-height: 1.7;
+}
+.sayfa-hakkimda .content-section .image img,
+.sayfa-hakkimda .col figure img {
+    border: 4px solid white;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.35);
+}
+.sayfa-hakkimda .col figure figcaption {
+    color: white;
+    text-shadow: 1px 1px 3px black;
+    font-weight: bold;
+    margin-top: 10px;
+    font-size: 0.9rem;
+}
+.sayfa-hakkimda .container.my-5 h2 {
+    color: white;
+    text-shadow: 1px 1px 3px black;
+    margin-bottom: 1.5rem;
+}
+
+.sayfa-ozgecmis .container,
+.sayfa-iletisim .container,
+.sayfa-iletisim-cikti .container {
+    background-color: #ffffff;
+    padding: 35px;
+    border-radius: 10px;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.1);
+}
+.sayfa-ozgecmis h1, .sayfa-ozgecmis h3 {
+    color: #0056b3;
+}
+.sayfa-ozgecmis hr {
+    border-top: 1px solid #ccc;
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+.sayfa-ozgecmis .bilgiler-container .bilgi-foto img {
+    max-width: 160px;
+    border: 4px solid #0056b3;
+    border-radius: 50%;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+.sayfa-ozgecmis section p, .sayfa-ozgecmis section li {
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+.sayfa-memleketim .carousel-item img {
+    height: 550px;
+    object-fit: cover;
+}
+.sayfa-memleketim .carousel-caption {
+    background-color: rgba(0, 0, 0, 0.7) !important;
+    border-radius: .3rem;
+    padding: 1rem;
+}
+.sayfa-memleketim .city-info {
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 8px;
+    color: #333;
+    margin-top: 40px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.1);
+}
+.sayfa-memleketim .city-info h1, .sayfa-memleketim .city-info h3, .sayfa-memleketim .container > h2 {
+    color: #0056b3;
+}
+.sayfa-memleketim .city-info p {
+    line-height: 1.7;
+    color: #454545;
+}
+.sayfa-memleketim .place-card {
+    background-color: #f8f9fa;
+    border: 1px solid #dee2e6;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 20px;
+    color: #333;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    height: 100%;
+}
+.sayfa-memleketim .place-card img {
+    max-width: 100%;
+    border-radius: 5px;
+    margin-bottom: 15px;
+}
+.sayfa-memleketim .place-card h4 {
+    color: #0056b3;
+}
+
+.sayfa-mirasimiz .hero-section {
+    background: url('../images/fenerbahce_stad_atmosfer.jpg') no-repeat center center;
+    background-size: cover;
+    padding: 100px 0;
+    color: white;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.85);
+}
+.sayfa-mirasimiz .hero-section h1 { font-size: 3.8rem; }
+.sayfa-mirasimiz .hero-section p.lead { font-size: 1.5rem; }
+.sayfa-mirasimiz .section-title {
+    color: #FDB913;
+    margin-top: 40px;
+    margin-bottom: 30px;
+    padding-bottom: 10px;
+    border-bottom: 3px solid #003366;
+    display: inline-block;
+    font-size: 2.2rem;
+}
+.sayfa-mirasimiz .team-card {
+    background-color: rgba(0, 51, 102, 0.85);
+    border: 2px solid #FDB913;
+    border-radius: 10px;
+    padding: 30px;
+    margin-bottom: 40px;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+    color: #f0f0f0;
+}
+.sayfa-mirasimiz .team-card img {
+    width: 100%;
+    max-height: 320px;
+    height: auto;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    border: 2px solid #FDB913;
+}
+.sayfa-mirasimiz .team-card h3 {
+    color: #FDB913;
+    margin-bottom: 15px;
+    font-size: 1.6rem;
+}
+.sayfa-mirasimiz .team-card p {
+    font-size: 1rem;
+    line-height: 1.7;
+}
+
+.sayfa-ilgi-alanlarim .hero-geography-theme {
+    background: url('../images/doga_ve_harita_arkaplan.jpg') no-repeat center center;
+    background-size: cover;
+    padding: 80px 20px;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+    margin-bottom: 0;
+}
+.sayfa-ilgi-alanlarim .hero-geography-theme h1 { font-size: 2.8rem; }
+.sayfa-ilgi-alanlarim .main-content-container {
+    background-color: #ffffff;
+    padding: 35px;
+    border-radius: 0 0 8px 8px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    position: relative;
+    z-index: 10;
+    color: #333;
+}
+.sayfa-ilgi-alanlarim .main-content-container .page-title,
+.sayfa-ilgi-alanlarim .main-content-container .page-lead {
+    color: #2c3e50;
+    text-shadow: none;
+}
+.sayfa-ilgi-alanlarim .content-card-geo {
+    background-color: #f8f9fa;
+    border: 1px solid #dee2e6;
+    padding: 25px;
+    margin-bottom: 25px;
+    border-radius: 8px;
+    color: #212529;
+    display: flex; 
+    flex-direction: column; 
+    height: 100%;
+}
+.sayfa-ilgi-alanlarim .content-card-geo h3 {
+    color: #0056b3;
+    border-bottom: 2px solid #0056b3;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+.sayfa-ilgi-alanlarim .content-card-geo img {
+    max-width: 100%;
+    height: auto;
+    max-height: 220px; 
+    object-fit: cover; 
+    border-radius: 5px;
+    margin-top: 15px; 
+    border: 1px solid #ddd;
+}
+.sayfa-ilgi-alanlarim .content-card-geo p {
+    line-height: 1.65; 
+    color: #555555; 
+    flex-grow: 1;
+    font-size: 0.95rem;
+}
+.sayfa-ilgi-alanlarim .api-section-geo {
+    background-color: #e9ecef;
+    padding: 30px;
+    margin-top: 40px;
+    border-radius: 10px;
+    color: #343a40;
+}
+.sayfa-ilgi-alanlarim .api-section-geo h4 {
+    color: #198754;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+.sayfa-ilgi-alanlarim #api-data-placeholder-geo {
+    font-style: italic;
+    font-size: 1.1rem;
+    padding: 20px;
+    background-color: #f8f9fa;
+    border-radius: 5px;
+    min-height: 100px;
+    color: #212529;
+    border: 1px solid #dee2e6;
+}
+.sayfa-ilgi-alanlarim #api-data-placeholder-geo .blockquote-footer a {
+    color: #007bff;
+}
+
+.sayfa-iletisim h2 {
+    color: #0056b3;
+    margin-bottom: 25px;
+}
+.sayfa-iletisim .form-label {
+    font-weight: 500;
+}
+.sayfa-iletisim-cikti h2 {
+    color: #198754;
+    margin-bottom: 25px;
+}
+.sayfa-iletisim-cikti .list-group-item strong {
+    color: #0056b3;
+}
+
+@media (max-width: 768px) {
+    .hero-section h1, 
+    .sayfa-mirasimiz .hero-section h1,
+    .sayfa-ilgi-alanlarim .hero-geography-theme h1 {
+        font-size: 2.2rem;
+    }
+    .navbar-nav {
+        text-align: center;
+    }
+    .sayfa-memleketim .carousel-item img {
+        height: 300px;
+    }
+    .login-page-body .card {
+        margin-left: 15px;
+        margin-right: 15px;
+    }
+}
