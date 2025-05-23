@@ -59,9 +59,8 @@
                             echo '<p class="alert alert-warning">Geçersiz e-posta formatı.</p>';
                             echo '<p><a href="index.html" class="btn btn-primary">Giriş Sayfasına Dön</a></p>';
                         }
-                        */
                         else if ($email === $correct_email && $password === $correct_password) {
-                            header("Location: Gecis.PHP");
+                            header("Location: Gecis.php");
                             exit;
                         } else {
                             echo '<p class="alert alert-danger">E-posta veya şifre yanlış. Lütfen tekrar deneyin.</p>';
