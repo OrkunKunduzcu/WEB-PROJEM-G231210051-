@@ -1,1 +1,1 @@
-Web Projesi G231210051
+Web Teknolojileri dersi kapsamında kendimi ve şehrimi kısaca sizlere tanıttım
