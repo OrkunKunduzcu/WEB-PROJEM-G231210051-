@@ -120,7 +120,7 @@
 
         if (!empty($email) && !empty($password)) {
             if ($email === $correct_email && $password === $correct_password) {
-                header("Location: Gecis.PHP");
+                header("Location: Gecis.php");
                 exit();
             } else {
                 echo "<script>showErrorModal();</script>";
